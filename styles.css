@@ -195,6 +195,16 @@ section{padding:48px 0}
   text-transform:uppercase;
 }
 .grid{display:grid; gap:18px}
+.softCards{gap:16px}
+.softCard{
+  background:rgba(251,247,242,.7);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:22px;
+  box-shadow:0 6px 18px rgba(35,31,28,.04);
+}
+.pillsCard{margin-top:16px}
+.pillsCard .pills{margin:0}
 .cardless h3{
   margin:0 0 8px;
   font-size:24px;
@@ -222,12 +232,22 @@ section{padding:48px 0}
   background:rgba(251,247,242,.6);
 }
 
-/* Program blocks (no cards) */
+/* Program blocks */
 .program{
   border-top:1px solid rgba(35,31,28,.10);
   padding-top:18px;
 }
 .program:first-child{border-top:0; padding-top:0}
+.programCard{
+  border:1px solid var(--line);
+  padding:20px;
+  border-radius:16px;
+  background:rgba(251,247,242,.7);
+  box-shadow:0 6px 18px rgba(35,31,28,.04);
+}
+.programCard.program{border-top:0; padding-top:0}
+.programCard.program:first-child{border-top:0; padding-top:0}
+.programCard .topline{gap:16px}
 .program .topline{
   display:flex;
   justify-content:space-between;
@@ -276,6 +296,7 @@ footer{padding:42px 0}
   h1{font-size:56px}
   section{padding:60px 0}
   .grid.cols2{grid-template-columns:1fr 1fr; gap:28px}
+  .softCard{padding:26px}
   .foot{grid-template-columns:1fr 1fr; align-items:start}
   .footLinks{justify-content:flex-end}
 }
