@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Agendar | Ana Paula Rocha</title>
+  <meta name="description" content="Agende sua avaliação em endocrinologia com a Dra. Ana Paula Rocha. Atendimento presencial e telemedicina." />
+  <title>Agendar Avaliação | Dra. Ana Paula Rocha</title>
   <link rel="stylesheet" href="./styles.css" />
   <style>
     .panel{border:1px solid var(--line); background:rgba(251,247,242,.92); padding:18px}
@@ -43,8 +44,8 @@
         </nav>
 
         <div class="actions">
-          <a class="btn" id="waTop" href="#" rel="noopener">WhatsApp</a>
-          <a class="btn primary" href="./agendar.html">Agendar</a>
+          <a class="btn" id="waTop" href="#" rel="noopener">Falar com a equipe</a>
+          <a class="btn primary" href="./agendar.html">Agendar avaliação</a>
         </div>
       </div>
     </div>
@@ -54,19 +55,20 @@
     <div class="wrap">
       <div class="head">
         <h2>Agendar</h2>
-        <span>Consulta</span>
+        <span>Avaliação</span>
       </div>
 
       <div class="grid cols2 cardless">
         <div>
           <h3>Agendamento online.</h3>
-          <p class="note">Escolha o canal configurado (Calendly/Doctoralia/WhatsApp/API). Se preferir, fale com a clínica no WhatsApp.</p>
+          <p class="note">Escolha o canal configurado (Calendly/Doctoralia/WhatsApp/API). Se preferir, fale com a equipe no WhatsApp.</p>
           <div class="ctaRow" style="margin-top:18px">
             <a class="btn" href="./programas.html">Ver programas</a>
-            <a class="btn" id="waHero" href="#" rel="noopener">WhatsApp</a>
+            <a class="btn" id="waHero" href="#" rel="noopener">Falar com a equipe</a>
           </div>
           <div class="meta" style="margin-top:18px">
             <div><b>CRM</b> <span id="crm">PREENCHER</span></div>
+            <div><b>Atendimento</b> Presencial e Telemedicina</div>
           </div>
         </div>
 
@@ -83,24 +85,24 @@
           <div id="formWrap" class="hide">
             <form id="bookForm" class="form">
               <div>
-                <label for="name">Nome</label>
-                <input id="name" required placeholder="Seu nome" />
+                <label for="name">Nome completo</label>
+                <input id="name" required placeholder="Digite seu nome" />
               </div>
               <div>
                 <label for="phone">WhatsApp</label>
-                <input id="phone" required placeholder="(61) 9XXXX-XXXX" />
+                <input id="phone" required placeholder="(DDD) 9XXXX-XXXX" />
               </div>
               <div class="rowFull">
-                <label for="program">Programa</label>
+                <label for="program">Programa de interesse</label>
                 <select id="program">
                   <option value="Endocrinologia Avançada">Endocrinologia Avançada</option>
                   <option value="Saúde e Emagrecimento">Saúde e Emagrecimento</option>
                   <option value="Acompanhamento em Diabetes">Acompanhamento em Diabetes</option>
                 </select>
               </div>
-              <textarea id="notes" placeholder="Mensagem (opcional)"></textarea>
+              <textarea id="notes" placeholder="Descreva brevemente sua necessidade (opcional)"></textarea>
               <div class="rowFull">
-                <button class="btn primary" type="submit" id="submitBtn">Enviar</button>
+                <button class="btn primary" type="submit" id="submitBtn">Enviar solicitação</button>
               </div>
             </form>
           </div>
@@ -108,8 +110,8 @@
           <div id="linkWrap" class="hide">
             <p class="note">Abrir agendamento externo.</p>
             <div class="ctaRow" style="margin-top:14px">
-              <a class="btn primary" id="externalLink" href="#">Abrir</a>
-              <a class="btn" id="waFooter" href="#" rel="noopener">WhatsApp</a>
+              <a class="btn primary" id="externalLink" href="#">Abrir agendamento</a>
+              <a class="btn" id="waFooter" href="#" rel="noopener">Falar com a equipe</a>
             </div>
           </div>
 
