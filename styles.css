@@ -1,11 +1,11 @@
 :root{
   /* Paleta da foto: creme + marrom profundo + dourado sutil */
-  --paper:#FBF7F2;
-  --bg:#F6EFE6;
-  --ink:#231F1C;
+  --paper:#F7F1EA;
+  --bg:#EFE4D7;
+  --ink:#1F1B18;
   --muted:rgba(35,31,28,.62);
   --line:rgba(35,31,28,.14);
-  --accent:#C8A477;
+  --accent:#B68A5A;
 
   --max:1180px;
   /* fallback garantido (jpg). O JS troca para o caminho do config se existir. */
@@ -29,6 +29,13 @@ a{color:inherit}
 .wrap{max-width:var(--max); margin:0 auto; padding:0 18px} /* mobile first */
 .line{height:1px; background:var(--line)}
 .hide{display:none !important}
+
+/* Section tones */
+.sectionBand{
+  background:linear-gradient(180deg, rgba(239,228,215,.55) 0%, rgba(247,241,234,.0) 100%);
+  border-top:1px solid rgba(35,31,28,.06);
+  border-bottom:1px solid rgba(35,31,28,.06);
+}
 
 /* Header (sticky) */
 header{
@@ -205,6 +212,18 @@ section{padding:48px 0}
 }
 .pillsCard{margin-top:16px}
 .pillsCard .pills{margin:0}
+.tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px}
+.tag{
+  border:1px solid rgba(35,31,28,.12);
+  border-radius:999px;
+  padding:6px 10px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:rgba(35,31,28,.70);
+  background:rgba(251,247,242,.9);
+}
 .cardless h3{
   margin:0 0 8px;
   font-size:24px;
@@ -266,6 +285,34 @@ section{padding:48px 0}
   font-size:15px;
   max-width:72ch;
 }
+.programHeader{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.programIcon{
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  border:1px solid rgba(35,31,28,.12);
+  background:rgba(200,164,119,.10);
+}
+.programIcon svg{width:18px; height:18px; stroke:var(--ink)}
+
+/* Testimonials */
+.testimonialGrid{display:grid; gap:14px}
+.testimonial{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(35,31,28,.04);
+}
+.testimonial p{margin:0; color:rgba(35,31,28,.78); line-height:1.8}
+.testimonial .who{margin-top:10px; font-weight:900; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--muted)}
+.testimonial .source{font-size:11px; letter-spacing:1px; text-transform:uppercase; color:rgba(35,31,28,.55)}
 
 /* Footer */
 footer{padding:42px 0}
@@ -297,6 +344,7 @@ footer{padding:42px 0}
   section{padding:60px 0}
   .grid.cols2{grid-template-columns:1fr 1fr; gap:28px}
   .softCard{padding:26px}
+  .testimonialGrid{grid-template-columns:1fr 1fr 1fr}
   .foot{grid-template-columns:1fr 1fr; align-items:start}
   .footLinks{justify-content:flex-end}
 }
