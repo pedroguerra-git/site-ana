@@ -26,7 +26,7 @@ body{
 }
 
 a{color:inherit}
-.wrap{max-width:var(--max); margin:0 auto; padding:0 18px} /* mobile first */
+.wrap{max-width:var(--max); margin:0 auto; padding:0 22px} /* mobile first */
 .line{height:1px; background:var(--line)}
 .hide{display:none !important}
 
@@ -112,7 +112,7 @@ nav a:hover{color:var(--ink)}
 .btn{
   border:1px solid var(--line);
   background:transparent;
-  padding:12px 14px;
+  padding:14px 16px;
   border-radius:12px; /* quadrado premium */
   font-size:12px;
   font-weight:900;
@@ -207,7 +207,7 @@ section{padding:48px 0}
   background:rgba(251,247,242,.7);
   border:1px solid var(--line);
   border-radius:16px;
-  padding:22px;
+  padding:24px;
   box-shadow:0 6px 18px rgba(35,31,28,.04);
 }
 .pillsCard{margin-top:16px}
@@ -259,7 +259,7 @@ section{padding:48px 0}
 .program:first-child{border-top:0; padding-top:0}
 .programCard{
   border:1px solid var(--line);
-  padding:20px;
+  padding:22px;
   border-radius:16px;
   background:rgba(251,247,242,.7);
   box-shadow:0 6px 18px rgba(35,31,28,.04);
@@ -306,9 +306,30 @@ section{padding:48px 0}
 .testimonial{
   border:1px solid var(--line);
   border-radius:16px;
-  padding:18px;
+  padding:22px;
   background:#fff;
   box-shadow:0 6px 18px rgba(35,31,28,.04);
+}
+.topics{
+  margin:12px 0 0;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:8px;
+}
+.topics li{
+  padding-left:16px;
+  position:relative;
+  color:rgba(35,31,28,.76);
+  line-height:1.7;
+  font-size:14px;
+}
+.topics li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  color:var(--accent);
+  font-weight:900;
 }
 .testimonial p{margin:0; color:rgba(35,31,28,.78); line-height:1.8}
 .testimonial .who{margin-top:10px; font-weight:900; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--muted)}
@@ -333,7 +354,7 @@ footer{padding:42px 0}
 @media (min-width: 980px){
   .hero{background-size:contain; background-position:right center;}
 
-  .wrap{padding:0 22px}
+  .wrap{padding:0 26px}
   header .top{height:72px}
   nav{position:static; display:flex !important; background:transparent; border:0; box-shadow:none}
   nav .wrap{padding:0}
@@ -343,7 +364,7 @@ footer{padding:42px 0}
   h1{font-size:56px}
   section{padding:60px 0}
   .grid.cols2{grid-template-columns:1fr 1fr; gap:28px}
-  .softCard{padding:26px}
+  .softCard{padding:28px}
   .testimonialGrid{grid-template-columns:1fr 1fr 1fr}
   .foot{grid-template-columns:1fr 1fr; align-items:start}
   .footLinks{justify-content:flex-end}
