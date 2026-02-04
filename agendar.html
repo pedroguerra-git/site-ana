@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Agendar | Ana Paula Rocha</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .panel{border:1px solid var(--line); background:rgba(251,247,242,.92); padding:18px}
+    .panelTop{display:flex; justify-content:space-between; align-items:flex-end; gap:12px; margin-bottom:12px}
+    .panelTop b{font-size:14px; font-weight:900; letter-spacing:1px; text-transform:uppercase}
+    .panelTop small{color:var(--muted); font-weight:900; letter-spacing:1.1px; text-transform:uppercase; font-size:11px; text-align:right}
+    .note{color:rgba(35,31,28,.74); line-height:1.85; font-size:15px; max-width:70ch; margin:0}
+    .form{display:grid; grid-template-columns:1fr; gap:12px; margin-top:10px}
+    @media(min-width:980px){ .form{grid-template-columns:1fr 1fr} }
+    label{display:block; margin:0 0 6px; color:var(--muted); font-weight:900; letter-spacing:1.1px; text-transform:uppercase; font-size:11px}
+    input, select, textarea{width:100%; border:1px solid var(--line); background:#fff; padding:12px 12px; border-radius:12px; font:inherit; outline:none}
+    textarea{grid-column:1/-1; min-height:92px}
+    .rowFull{grid-column:1/-1}
+    #embedFrame{width:100%; height:760px; border:0}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <div class="top">
+        <a class="brand" href="./index.html" aria-label="Início">
+          <img id="logo" src="./assets/logo.svg" alt="Ana Paula Rocha" />
+        </a>
+
+        <button class="navBtn" id="navBtn" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+        </button>
+
+        <nav id="nav" aria-label="Navegação">
+          <div class="wrap">
+            <a href="./index.html#tema">Tema</a>
+            <a href="./index.html#programas">Programas</a>
+            <a href="./agendar.html">Agendar</a>
+            <a href="./index.html#contato">Contato</a>
+          </div>
+        </nav>
+
+        <div class="actions">
+          <a class="btn" id="waTop" href="#" rel="noopener">WhatsApp</a>
+          <a class="btn primary" href="./agendar.html">Agendar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding:52px 0">
+    <div class="wrap">
+      <div class="head">
+        <h2>Agendar</h2>
+        <span>Consulta</span>
+      </div>
+
+      <div class="grid cols2 cardless">
+        <div>
+          <h3>Agendamento online.</h3>
+          <p class="note">Escolha o canal configurado (Calendly/Doctoralia/WhatsApp/API). Se preferir, fale com a clínica no WhatsApp.</p>
+          <div class="ctaRow" style="margin-top:18px">
+            <a class="btn" href="./programas.html">Ver programas</a>
+            <a class="btn" id="waHero" href="#" rel="noopener">WhatsApp</a>
+          </div>
+          <div class="meta" style="margin-top:18px">
+            <div><b>CRM</b> <span id="crm">PREENCHER</span></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panelTop">
+            <b id="modeTitle">Agendamento</b>
+            <small id="modeLabel">Configurar</small>
+          </div>
+
+          <div id="embedWrap" class="hide">
+            <iframe id="embedFrame" title="Agendamento" loading="lazy"></iframe>
+          </div>
+
+          <div id="formWrap" class="hide">
+            <form id="bookForm" class="form">
+              <div>
+                <label for="name">Nome</label>
+                <input id="name" required placeholder="Seu nome" />
+              </div>
+              <div>
+                <label for="phone">WhatsApp</label>
+                <input id="phone" required placeholder="(61) 9XXXX-XXXX" />
+              </div>
+              <div class="rowFull">
+                <label for="program">Programa</label>
+                <select id="program">
+                  <option value="Endocrinologia Avançada">Endocrinologia Avançada</option>
+                  <option value="Saúde e Emagrecimento">Saúde e Emagrecimento</option>
+                  <option value="Acompanhamento em Diabetes">Acompanhamento em Diabetes</option>
+                </select>
+              </div>
+              <textarea id="notes" placeholder="Mensagem (opcional)"></textarea>
+              <div class="rowFull">
+                <button class="btn primary" type="submit" id="submitBtn">Enviar</button>
+              </div>
+            </form>
+          </div>
+
+          <div id="linkWrap" class="hide">
+            <p class="note">Abrir agendamento externo.</p>
+            <div class="ctaRow" style="margin-top:14px">
+              <a class="btn primary" id="externalLink" href="#">Abrir</a>
+              <a class="btn" id="waFooter" href="#" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+
+          <div id="fallbackWrap">
+            <p class="note" style="margin:0">
+              Configure <b>booking.mode</b> no <code>site.config.json</code> para habilitar o agendamento aqui.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="line"></div>
+  <footer>
+    <div class="wrap" style="padding:34px 18px 42px">
+      <div class="foot">
+        <div><small>© <span id="year"></span> • Ana Paula Rocha</small></div>
+        <div class="footLinks">
+          <a href="./programas.html">Programas</a>
+          <a href="./index.html">Início</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./scripts.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function makeWhatsAppLink(numberE164, msg){
+      const num = (numberE164 || "").replace("+","");
+      return "https://wa.me/" + num + "?text=" + encodeURIComponent(msg);
+    }
+    async function submitToAPI(endpoint, token, payload){
+      const res = await fetch(endpoint, {
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json",
+          ...(token && token !== "PREENCHER" ? {"Authorization":"Bearer " + token} : {})
+        },
+        body: JSON.stringify(payload)
+      });
+      if(!res.ok) throw new Error("Falha ao enviar para API.");
+      return await res.json().catch(()=>({ok:true}));
+    }
+
+    (async ()=>{
+      const cfg = window.__CFG || await (await fetch("./site.config.json",{cache:"no-store"})).json();
+
+      const crmEl = document.getElementById("crm");
+      if(crmEl) crmEl.textContent = cfg.clinic?.crm || "PREENCHER";
+
+      const mode = cfg.booking?.mode || "calendly";
+      const modeLabel = document.getElementById("modeLabel");
+      const embedWrap = document.getElementById("embedWrap");
+      const formWrap = document.getElementById("formWrap");
+      const linkWrap = document.getElementById("linkWrap");
+      const fallbackWrap = document.getElementById("fallbackWrap");
+      const iframe = document.getElementById("embedFrame");
+
+      function show(el){ el.classList.remove("hide"); }
+      function hide(el){ el.classList.add("hide"); }
+
+      hide(embedWrap); hide(formWrap); hide(linkWrap); show(fallbackWrap);
+
+      if(mode === "calendly"){
+        modeLabel.textContent = "Calendly";
+        if(cfg.booking.calendly_embed_url && cfg.booking.calendly_embed_url !== "PREENCHER"){
+          iframe.src = cfg.booking.calendly_embed_url;
+          show(embedWrap); hide(fallbackWrap);
+        }
+      } else if(mode === "doctoralia"){
+        modeLabel.textContent = "Doctoralia";
+        if(cfg.booking.doctoralia_embed_url && cfg.booking.doctoralia_embed_url !== "PREENCHER"){
+          iframe.src = cfg.booking.doctoralia_embed_url;
+          show(embedWrap); hide(fallbackWrap);
+        }
+      } else if(mode === "whatsapp_form"){
+        modeLabel.textContent = "WhatsApp";
+        show(formWrap); hide(fallbackWrap);
+      } else if(mode === "api_form"){
+        modeLabel.textContent = "API";
+        show(formWrap); hide(fallbackWrap);
+      } else if(mode === "link_only"){
+        modeLabel.textContent = "Link externo";
+        const a = document.getElementById("externalLink");
+        const url = cfg.booking.external_booking_url;
+        if(url && url !== "PREENCHER"){ a.href = url; }
+        show(linkWrap); hide(fallbackWrap);
+      }
+
+      const form = document.getElementById("bookForm");
+      if(form){
+        form.addEventListener("submit", async (e)=>{
+          e.preventDefault();
+          const payload = {
+            name: document.getElementById("name").value.trim(),
+            phone: document.getElementById("phone").value.trim(),
+            program: document.getElementById("program").value,
+            notes: document.getElementById("notes").value.trim(),
+            created_at: new Date().toISOString()
+          };
+
+          if(mode === "api_form"){
+            const btn = document.getElementById("submitBtn");
+            btn.disabled = true; btn.textContent = "Enviando…";
+            try{
+              await submitToAPI(cfg.booking.api_endpoint, cfg.booking.api_auth_token, payload);
+              btn.textContent = "Enviado ✓";
+            }catch(err){
+              console.error(err);
+              btn.disabled = false; btn.textContent = "Enviar";
+            }
+          } else {
+            const waNumber = cfg.clinic?.whatsapp_e164 || cfg.clinic?.phone_e164 || "+5561981573081";
+            const msg =
+`Olá! Gostaria de agendar.
+
+• Nome: ${payload.name}
+• WhatsApp: ${payload.phone}
+• Programa: ${payload.program}
+• Mensagem: ${payload.notes || "-"}
+
+Pode orientar disponibilidade e próximos passos?`;
+            window.open(makeWhatsAppLink(waNumber, msg), "_blank", "noopener");
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

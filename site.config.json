@@ -1,0 +1,31 @@
+{
+  "clinic": {
+    "name": "Dra. Ana Paula Rocha",
+    "brand_name": "Ana Paula Rocha",
+    "theme": "Saúde e longevidade",
+    "crm": "PREENCHER",
+    "phone_e164": "+5561981573081",
+    "whatsapp_e164": "+5561981573081",
+    "instagram_url": "PREENCHER",
+    "address_line": "PREENCHER",
+    "hours_line": "PREENCHER"
+  },
+  "assets": {
+    "hero_webp": "assets/hero_2560x900_clean.webp",
+    "hero_jpg": "assets/hero_2560x900_clean.jpg",
+    "logo": "assets/logo.svg",
+    "monogram": "assets/monogram.svg"
+  },
+  "ctas": {
+    "primary_label": "Agendar consulta",
+    "secondary_label": "WhatsApp"
+  },
+  "booking": {
+    "mode": "calendly",
+    "calendly_embed_url": "PREENCHER",
+    "doctoralia_embed_url": "PREENCHER",
+    "external_booking_url": "PREENCHER",
+    "api_endpoint": "https://SEU-DOMINIO/api/booking",
+    "api_auth_token": "PREENCHER"
+  }
+}
