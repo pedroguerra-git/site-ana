@@ -5,10 +5,11 @@
   --ink:#1D1D1F;
   --muted:rgba(29,29,31,.64);
   --line:rgba(29,29,31,.12);
-  --accent:#0071E3;
-  --accent-soft:rgba(0,113,227,.12);
+  --accent:#2C2C2E;
+  --accent-soft:rgba(44,44,46,.12);
   --card:#FFFFFF;
   --card-shadow:0 20px 50px rgba(0,0,0,.08);
+  --hero-fade:#EFE7DE;
 
   --max:1180px;
   /* fallback garantido (jpg). O JS troca para o caminho do config se existir. */
@@ -29,7 +30,7 @@ body{
 }
 
 a{color:inherit}
-.wrap{max-width:var(--max); margin:0 auto; padding:0 20px} /* mobile first */
+.wrap{max-width:var(--max); margin:0 auto; padding:0 24px} /* mobile first */
 .line{height:1px; background:var(--line)}
 .hide{display:none !important}
 
@@ -115,7 +116,7 @@ nav a:hover{color:var(--ink)}
 .btn{
   border:1px solid var(--line);
   background:#fff;
-  padding:12px 18px;
+  padding:14px 20px;
   border-radius:999px;
   font-size:12px;
   font-weight:700;
@@ -128,7 +129,7 @@ nav a:hover{color:var(--ink)}
 }
 .btn:hover{transform:translateY(-1px); border-color:rgba(0,0,0,.18); box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .btn.primary{background:var(--accent); color:#fff; border-color:var(--accent)}
-.btn.primary:hover{background:#0060c7}
+.btn.primary:hover{background:#1D1D1F}
 
 /* Hero */
 .hero{
@@ -136,7 +137,7 @@ nav a:hover{color:var(--ink)}
   display:flex;
   align-items:flex-end;
   background:
-    linear-gradient(180deg, rgba(245,245,247,0) 0%, rgba(245,245,247,.72) 60%, rgba(245,245,247,.98) 100%),
+    linear-gradient(180deg, rgba(239,231,222,0) 0%, rgba(239,231,222,.55) 45%, rgba(245,245,247,.95) 100%),
     var(--hero-url);
   background-size:cover;
   background-position:right center;
@@ -144,7 +145,7 @@ nav a:hover{color:var(--ink)}
   border-bottom:1px solid var(--line);
 }
 
-.hero .inner{padding:56px 0 44px; width:100%}
+.hero .inner{padding:72px 0 56px; width:100%}
 .kicker{
   display:inline-flex; align-items:center; gap:10px;
   color:var(--muted);
@@ -169,7 +170,7 @@ h1{
   line-height:1.75;
   max-width:54ch;
 }
-.ctaRow{margin-top:18px; display:flex; gap:10px; flex-wrap:wrap}
+.ctaRow{margin-top:20px; display:flex; gap:12px; flex-wrap:wrap}
 .meta{
   margin-top:18px;
   color:var(--muted);
@@ -180,7 +181,7 @@ h1{
 .meta b{color:rgba(35,31,28,.80)}
 
 /* Sections */
-section{padding:48px 0}
+section{padding:56px 0}
 .head{
   display:flex;
   align-items:flex-end;
@@ -210,7 +211,7 @@ section{padding:48px 0}
   background:var(--card);
   border:1px solid var(--line);
   border-radius:16px;
-  padding:24px;
+  padding:28px;
   box-shadow:var(--card-shadow);
 }
 .pillsCard{margin-top:16px}
@@ -262,7 +263,7 @@ section{padding:48px 0}
 .program:first-child{border-top:0; padding-top:0}
 .programCard{
   border:1px solid var(--line);
-  padding:22px;
+  padding:26px;
   border-radius:16px;
   background:var(--card);
   box-shadow:var(--card-shadow);
@@ -309,7 +310,7 @@ section{padding:48px 0}
 .testimonial{
   border:1px solid var(--line);
   border-radius:16px;
-  padding:22px;
+  padding:26px;
   background:#fff;
   box-shadow:var(--card-shadow);
 }
@@ -357,7 +358,7 @@ footer{padding:42px 0}
 @media (min-width: 980px){
   .hero{background-size:contain; background-position:right center;}
 
-  .wrap{padding:0 28px}
+  .wrap{padding:0 32px}
   header .top{height:72px}
   nav{position:static; display:flex !important; background:transparent; border:0; box-shadow:none}
   nav .wrap{padding:0}
@@ -365,7 +366,7 @@ footer{padding:42px 0}
   .navBtn{display:none}
   .actions{display:flex; gap:10px; align-items:center}
   h1{font-size:64px}
-  section{padding:60px 0}
+  section{padding:80px 0}
   .grid.cols2{grid-template-columns:1fr 1fr; gap:28px}
   .softCard{padding:28px}
   .testimonialGrid{grid-template-columns:1fr 1fr 1fr}
