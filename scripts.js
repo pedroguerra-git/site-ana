@@ -74,7 +74,7 @@ function setupMobileNav(){
   const waMsg = `Olá! Gostaria de informações sobre consulta com a ${cfg.clinic?.name || "Dra. Ana Paula Rocha"}.`;
   const waHref = makeWhatsAppLink(waNumber, waMsg);
 
-  ["waTop","waHero","waFooter","waContact"].forEach(id=>{
+  ["waTop","waHero","waFooter","waContact","waMid"].forEach(id=>{
     const el = document.getElementById(id);
     if(el) el.href = waHref;
   });
