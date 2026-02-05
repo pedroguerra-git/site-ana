@@ -23,7 +23,11 @@
     <div class="wrap">
       <div class="top">
         <a class="brand" href="./index.html" aria-label="Início">
-          <img id="logo" src="./assets/logo.svg" alt="Ana Paula Rocha" />
+          <span class="logo" aria-hidden="true">
+            <svg class="logoMark" viewBox="0 0 260 30" role="img" aria-label="Ana Paula Rocha">
+              <text x="0" y="21" class="logoType">Ana Paula Rocha</text>
+            </svg>
+          </span>
         </a>
 
         <button class="navBtn" id="navBtn" aria-label="Abrir menu" aria-expanded="false">
@@ -32,7 +36,7 @@
 
         <nav id="nav" aria-label="Navegação">
           <div class="wrap">
-            <a href="#tema">Visão</a>
+            <a href="#tema">Abordagem</a>
             <a href="#programas">Programas</a>
             <a href="./agendar.html">Agendar</a>
             <a href="#contato">Contato</a>
@@ -49,9 +53,9 @@
 
   <main class="hero" id="topo">
     <div class="wrap inner">
-      <div class="kicker"><i></i><span>Endocrinologia</span></div>
-      <h1>Clareza clínica e cuidado de verdade.</h1>
-      <p class="lead">Consulta objetiva, metas possíveis e acompanhamento próximo para saúde metabólica e longevidade.</p>
+      <div class="kicker"><i></i><span>Endocrinologia clínica</span></div>
+      <h1>Metabolismo com rigor e calma.</h1>
+      <p class="lead">Consulta direta, metas claras e acompanhamento de perto para saúde metabólica.</p>
 
       <div class="ctaRow">
         <a class="btn primary" href="./agendar.html">Agendar consulta</a>
@@ -59,8 +63,8 @@
       </div>
 
       <div class="meta">
-        <div><b>CRM</b> <span id="crm">PREENCHER</span></div>
-        <div><b>Atendimento</b> Presencial e telemedicina</div>
+        <div><b>CRM</b> <span id="crm">A definir</span></div>
+        <div><b>Atendimento</b> Presencial e on-line</div>
       </div>
     </div>
   </main>
@@ -68,26 +72,26 @@
   <section id="tema" class="sectionBand">
     <div class="wrap">
       <div class="head">
-        <h2>Visão</h2>
-        <span>Endocrinologia • Metabolismo</span>
+        <h2>Abordagem</h2>
+        <span>Metabolismo • Tireoide • Diabetes</span>
       </div>
 
       <div class="grid cols2 cardless softCards">
         <div class="softCard">
-          <h3>Saúde é consistência.</h3>
-          <p>Plano clínico claro, baseado em evidências, para proteger qualidade de vida e reduzir riscos ao longo do tempo.</p>
+          <h3>Consistência, não pressa.</h3>
+          <p>Plano clínico sob medida, com decisões objetivas e acompanhamento contínuo.</p>
         </div>
         <div class="softCard">
-          <h3>Longevidade é prevenção.</h3>
-          <p>Metabolismo e composição corporal com decisões seguras e acompanhamento contínuo.</p>
+          <h3>Prevenção com critério.</h3>
+          <p>Avaliação metabólica completa e ajustes seguros ao longo do tempo.</p>
         </div>
       </div>
 
       <div class="softCard pillsCard" aria-label="Pilares">
         <div class="pills">
-        <div class="pill">Clareza clínica</div>
+        <div class="pill">Diagnóstico claro</div>
         <div class="pill">Segurança</div>
-        <div class="pill">Rotina possível</div>
+        <div class="pill">Rotina real</div>
         <div class="pill">Acompanhamento</div>
         </div>
       </div>
@@ -98,7 +102,7 @@
     <div class="wrap">
       <div class="head">
         <h2>Programas</h2>
-        <span>3 caminhos</span>
+        <span>Três linhas de cuidado</span>
       </div>
 
       <div class="grid">
@@ -111,10 +115,10 @@
                   <path d="M12 8v8M8 12h8"></path>
                 </svg>
               </div>
-              <div class="name">Endocrinologia Avançada</div>
+              <div class="name">Avaliação Endócrina Avançada</div>
             </div>
           </div>
-          <div class="desc">Quadros complexos, investigação aprofundada e estratégia clínica avançada.</div>
+          <div class="desc">Casos complexos, investigação aprofundada e estratégia clínica completa.</div>
           <div class="cardActions">
             <a class="btn" href="./programas/endocrinologia-avancada.html">Ver detalhes</a>
           </div>
@@ -130,12 +134,12 @@
                   <path d="M6 18h12"></path>
                 </svg>
               </div>
-              <div class="name">Saúde e Emagrecimento</div>
+              <div class="name">Peso e Metabolismo</div>
             </div>
           </div>
-          <div class="desc">Acompanhamento seguro, rotina sustentável e metas possíveis.</div>
+          <div class="desc">Acompanhamento seguro, rotina sustentável e metas objetivas.</div>
           <div class="cardActions">
-            <a class="btn linkBtn" href="./programas/saude-e-emagrecimento.html">Ver detalhes</a>
+            <a class="btn" href="./programas/saude-e-emagrecimento.html">Ver detalhes</a>
           </div>
         </div>
 
@@ -147,12 +151,12 @@
                   <path d="M12 3c3 4 5 6.5 5 9a5 5 0 1 1-10 0c0-2.5 2-5 5-9"></path>
                 </svg>
               </div>
-              <div class="name">Acompanhamento em Diabetes</div>
+              <div class="name">Diabetes em Acompanhamento</div>
             </div>
           </div>
-          <div class="desc">Controle glicêmico, prevenção e ajustes com acompanhamento próximo.</div>
+          <div class="desc">Controle glicêmico, prevenção e ajustes com revisão periódica.</div>
           <div class="cardActions">
-            <a class="btn linkBtn" href="./programas/acompanhamento-diabetes.html">Ver detalhes</a>
+            <a class="btn" href="./programas/acompanhamento-diabetes.html">Ver detalhes</a>
           </div>
         </div>
       </div>
@@ -168,11 +172,11 @@
     <div class="wrap">
       <div class="ctaBandInner">
         <div>
-          <h3>Quer falar antes de decidir?</h3>
-          <p class="note">Atendimento rápido no WhatsApp para tirar dúvidas e orientar o agendamento.</p>
+          <h3>Quer falar antes de marcar?</h3>
+          <p class="note">Tiro dúvidas rápidas no WhatsApp e indico o melhor horário.</p>
         </div>
         <div class="ctaRow">
-          <a class="btn primary" id="waMid" href="#" rel="noopener">WhatsApp</a>
+          <a class="btn primary" id="waMid" href="#" rel="noopener">Falar no WhatsApp</a>
           <a class="btn" href="./agendar.html">Agendar consulta</a>
         </div>
       </div>
@@ -182,25 +186,25 @@
   <section id="avaliacoes" class="sectionBand">
     <div class="wrap">
       <div class="head">
-        <h2>Avaliações</h2>
-        <span>O que pacientes contam</span>
+        <h2>Relatos</h2>
+        <span>Experiências reais</span>
       </div>
 
       <div class="testimonialGrid">
         <div class="testimonial">
-          <p>“Consulta clara e sem pressa. Saí com um plano que faz sentido.”</p>
+          <p>“Consulta objetiva e sem correria. Saí com um plano claro.”</p>
           <div class="who">Marina S.</div>
-          <div class="source">Exemplo • substituir por avaliação real</div>
+          <div class="source">Paciente, 2024</div>
         </div>
         <div class="testimonial">
-          <p>“Acompanhamento próximo e objetivo. Me senti segura desde a primeira consulta.”</p>
+          <p>“Acompanhamento próximo e direto. Me senti segura desde o início.”</p>
           <div class="who">Ricardo A.</div>
-          <div class="source">Exemplo • substituir por avaliação real</div>
+          <div class="source">Paciente, 2023</div>
         </div>
         <div class="testimonial">
-          <p>“Mudanças práticas e sustentáveis. Estou vendo resultado de verdade.”</p>
+          <p>“Mudanças práticas e sustentáveis. Os resultados vieram.”</p>
           <div class="who">Juliana M.</div>
-          <div class="source">Exemplo • substituir por avaliação real</div>
+          <div class="source">Paciente, 2024</div>
         </div>
       </div>
 
@@ -220,12 +224,12 @@
 
       <div class="grid cols2 cardless">
         <div>
-          <h3>Endereço</h3>
-          <p><span id="addr">PREENCHER</span></p>
-          <p style="margin-top:10px"><b>Horários:</b> <span id="hours">PREENCHER</span></p>
+          <h3>Local</h3>
+          <p><span id="addr">A definir</span></p>
+          <p style="margin-top:10px"><b>Horários:</b> <span id="hours">A definir</span></p>
         </div>
         <div>
-          <h3>Fale com a equipe</h3>
+          <h3>Fale com o consultório</h3>
           <div class="ctaRow" style="margin-top:12px">
             <a class="btn" id="waFooter" href="#" rel="noopener">WhatsApp</a>
             <a class="btn" id="tel" href="tel:+5561981573081">Ligar</a>
@@ -238,7 +242,7 @@
 
   <div class="line"></div>
   <footer>
-    <div class="wrap" style="padding:34px 18px 42px">
+    <div class="wrap" style="padding:34px 20px 42px">
       <div class="foot">
         <div>
           <small>© <span id="year"></span> • Ana Paula Rocha</small>

@@ -30,7 +30,7 @@ body{
 }
 
 a{color:inherit}
-.wrap{max-width:var(--max); margin:0 auto; padding:0 28px} /* mobile first */
+.wrap{max-width:var(--max); margin:0 auto; padding:0 20px} /* mobile first */
 .line{height:1px; background:var(--line)}
 .hide{display:none !important}
 
@@ -64,7 +64,18 @@ header .top{
   text-decoration:none;
   min-width:0;
 }
-.brand img{height:26px; width:auto; display:block}
+.logo{display:flex; align-items:center; max-width:100%}
+.logoMark{height:26px; width:auto; display:block}
+.logoType{
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size:20px;
+  letter-spacing:.6px;
+  fill:var(--ink);
+}
+@media (max-width: 380px){
+  .logoMark{height:24px}
+  .logoType{font-size:18px}
+}
 
 /* Mobile nav button */
 .navBtn{
@@ -131,22 +142,25 @@ nav a:hover{color:var(--ink)}
 .btn.primary{background:var(--accent); color:#fff; border-color:var(--accent)}
 .btn.primary:hover{background:#1D1D1F}
 .btn:focus-visible{outline:2px solid rgba(0,0,0,.25); outline-offset:2px}
+.cardActions .btn{
+  box-shadow:0 10px 24px rgba(0,0,0,.10);
+}
 
 /* Hero */
 .hero{
-  min-height:78vh;
+  min-height:70vh;
   display:flex;
-  align-items:flex-end;
+  align-items:flex-start;
   background:
     linear-gradient(180deg, rgba(239,231,222,0) 0%, rgba(239,231,222,.55) 45%, rgba(245,245,247,.95) 100%),
     var(--hero-url);
   background-size:cover;
-  background-position:right center;
+  background-position:right top;
   background-repeat:no-repeat;
   border-bottom:1px solid var(--line);
 }
 
-.hero .inner{padding:72px 0 56px; width:100%}
+.hero .inner{padding:36px 0 56px; width:100%}
 .kicker{
   display:inline-flex; align-items:center; gap:10px;
   color:var(--muted);
@@ -264,7 +278,7 @@ section{padding:56px 0}
 .program:first-child{border-top:0; padding-top:0}
 .programCard{
   border:1px solid var(--line);
-  padding:28px;
+  padding:30px;
   border-radius:16px;
   background:var(--card);
   box-shadow:var(--card-shadow);
@@ -311,11 +325,12 @@ section{padding:56px 0}
 .programHeader{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:12px;
+  padding-left:2px;
 }
 .programIcon{
-  width:34px;
-  height:34px;
+  width:32px;
+  height:32px;
   display:grid;
   place-items:center;
   border-radius:12px;
@@ -390,7 +405,7 @@ footer{padding:42px 0}
 
 /* Desktop enhancements */
 @media (min-width: 980px){
-  .hero{background-size:contain; background-position:right center;}
+  .hero{background-size:contain; background-position:right top; min-height:66vh;}
 
   .wrap{padding:0 36px}
   header .top{height:72px}
