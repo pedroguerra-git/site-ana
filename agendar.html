@@ -205,6 +205,13 @@
           iframe.src = cfg.booking.calendly_embed_url;
           show(embedWrap); hide(fallbackWrap);
         }
+      } else if(mode === "feegow"){
+        modeLabel.textContent = "Feegow";
+        const url = cfg.booking.feegow_online_url || cfg.booking.external_booking_url;
+        if(url && url !== "PREENCHER"){
+          iframe.src = url;
+          show(embedWrap); hide(fallbackWrap);
+        }
       } else if(mode === "doctoralia"){
         modeLabel.textContent = "Doctoralia";
         if(cfg.booking.doctoralia_embed_url && cfg.booking.doctoralia_embed_url !== "PREENCHER"){

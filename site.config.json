@@ -13,7 +13,7 @@
   "assets": {
     "hero_webp": "assets/hero_2560x900_clean.webp",
     "hero_jpg": "assets/hero_2560x900_clean.jpg",
-    "logo": "assets/logo.svg",
+    "logo": "assets/logo_nova.png",
     "monogram": "assets/monogram.svg"
   },
   "ctas": {
@@ -21,10 +21,11 @@
     "secondary_label": "WhatsApp"
   },
   "booking": {
-    "mode": "calendly",
+    "mode": "feegow",
     "calendly_embed_url": "PREENCHER",
     "doctoralia_embed_url": "PREENCHER",
     "external_booking_url": "PREENCHER",
+    "feegow_online_url": "PREENCHER",
     "api_endpoint": "https://SEU-DOMINIO/api/booking",
     "api_auth_token": "PREENCHER"
   }
