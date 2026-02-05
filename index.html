@@ -54,8 +54,8 @@
   <main class="hero" id="topo">
     <div class="wrap inner">
       <div class="kicker"><i></i><span>Endocrinologia clínica</span></div>
-      <h1>Metabolismo com rigor e calma.</h1>
-      <p class="lead">Consulta direta, metas claras e acompanhamento de perto para saúde metabólica.</p>
+      <h1>Metabolismo bem cuidado, sem pressa.</h1>
+      <p class="lead">Uma consulta direta, com metas realistas e acompanhamento de perto para cuidar do metabolismo.</p>
 
       <div class="ctaRow">
         <a class="btn primary" href="./agendar.html">Agendar consulta</a>
@@ -63,7 +63,7 @@
       </div>
 
       <div class="meta">
-        <div><b>CRM</b> <span id="crm">A definir</span></div>
+        <div class="js-hide-if-empty"><b>CRM</b> <span id="crm"></span></div>
         <div><b>Atendimento</b> Presencial e on-line</div>
       </div>
     </div>
@@ -78,12 +78,12 @@
 
       <div class="grid cols2 cardless softCards">
         <div class="softCard">
-          <h3>Consistência, não pressa.</h3>
-          <p>Plano clínico sob medida, com decisões objetivas e acompanhamento contínuo.</p>
+          <h3>Consistência acima da pressa.</h3>
+          <p>Plano clínico sob medida, decisões objetivas e acompanhamento ao longo do tempo.</p>
         </div>
         <div class="softCard">
           <h3>Prevenção com critério.</h3>
-          <p>Avaliação metabólica completa e ajustes seguros ao longo do tempo.</p>
+          <p>Avaliação completa e ajustes seguros ao longo do tempo.</p>
         </div>
       </div>
 
@@ -118,7 +118,7 @@
               <div class="name">Avaliação Endócrina Avançada</div>
             </div>
           </div>
-          <div class="desc">Casos complexos, investigação aprofundada e estratégia clínica completa.</div>
+          <div class="desc">Quando o quadro é complexo, a investigação é mais profunda e o plano é detalhado.</div>
           <div class="cardActions">
             <a class="btn" href="./programas/endocrinologia-avancada.html">Ver detalhes</a>
           </div>
@@ -137,7 +137,7 @@
               <div class="name">Peso e Metabolismo</div>
             </div>
           </div>
-          <div class="desc">Acompanhamento seguro, rotina sustentável e metas objetivas.</div>
+          <div class="desc">Acompanhamento sem extremos, com metas possíveis e ajustes de rotina.</div>
           <div class="cardActions">
             <a class="btn" href="./programas/saude-e-emagrecimento.html">Ver detalhes</a>
           </div>
@@ -154,7 +154,7 @@
               <div class="name">Diabetes em Acompanhamento</div>
             </div>
           </div>
-          <div class="desc">Controle glicêmico, prevenção e ajustes com revisão periódica.</div>
+          <div class="desc">Controle glicêmico com revisão periódica e foco em prevenção de complicações.</div>
           <div class="cardActions">
             <a class="btn" href="./programas/acompanhamento-diabetes.html">Ver detalhes</a>
           </div>
@@ -172,8 +172,8 @@
     <div class="wrap">
       <div class="ctaBandInner">
         <div>
-          <h3>Quer falar antes de marcar?</h3>
-          <p class="note">Tiro dúvidas rápidas no WhatsApp e indico o melhor horário.</p>
+          <h3>Quer tirar uma dúvida antes de marcar?</h3>
+          <p class="note">Respondo perguntas rápidas no WhatsApp e já indico o melhor horário.</p>
         </div>
         <div class="ctaRow">
           <a class="btn primary" id="waMid" href="#" rel="noopener">Falar no WhatsApp</a>
@@ -186,25 +186,25 @@
   <section id="avaliacoes" class="sectionBand">
     <div class="wrap">
       <div class="head">
-        <h2>Relatos</h2>
-        <span>Experiências reais</span>
+        <h2>O que pacientes contam</h2>
+        <span>Frases que ouvimos com frequência</span>
       </div>
 
       <div class="testimonialGrid">
         <div class="testimonial">
-          <p>“Consulta objetiva e sem correria. Saí com um plano claro.”</p>
-          <div class="who">Marina S.</div>
-          <div class="source">Paciente, 2024</div>
+          <p>“Saí da consulta sabendo exatamente o que fazer, sem correria.”</p>
+          <div class="who">Paciente</div>
+          <div class="source">Relato anônimo</div>
         </div>
         <div class="testimonial">
-          <p>“Acompanhamento próximo e direto. Me senti segura desde o início.”</p>
-          <div class="who">Ricardo A.</div>
-          <div class="source">Paciente, 2023</div>
+          <p>“Gostei do acompanhamento: ajustes pequenos, explicados com calma.”</p>
+          <div class="who">Paciente</div>
+          <div class="source">Relato anônimo</div>
         </div>
         <div class="testimonial">
-          <p>“Mudanças práticas e sustentáveis. Os resultados vieram.”</p>
-          <div class="who">Juliana M.</div>
-          <div class="source">Paciente, 2024</div>
+          <p>“Metas que cabem na rotina e um plano claro para seguir.”</p>
+          <div class="who">Paciente</div>
+          <div class="source">Relato anônimo</div>
         </div>
       </div>
 
@@ -225,8 +225,9 @@
       <div class="grid cols2 cardless">
         <div>
           <h3>Local</h3>
-          <p><span id="addr">A definir</span></p>
-          <p style="margin-top:10px"><b>Horários:</b> <span id="hours">A definir</span></p>
+          <p class="js-hide-if-empty"><span id="addr"></span></p>
+          <p class="js-hide-if-empty" style="margin-top:10px"><b>Horários:</b> <span id="hours"></span></p>
+          <p id="contactFallback" class="contactNote hide">Endereço e horários são confirmados no agendamento.</p>
         </div>
         <div>
           <h3>Fale com o consultório</h3>

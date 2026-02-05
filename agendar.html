@@ -70,14 +70,14 @@
 
       <div class="grid cols2 cardless">
         <div>
-          <h3>Agendamento online.</h3>
-          <p class="note">Escolha o canal preferido (Calendly, Doctoralia, WhatsApp ou formulário). Se preferir, fale direto no WhatsApp.</p>
+          <h3>Agendamento do seu jeito.</h3>
+          <p class="note">Você pode agendar por Calendly, Doctoralia, WhatsApp ou formulário. Se preferir, fale direto com a equipe no WhatsApp.</p>
           <div class="ctaRow" style="margin-top:18px">
             <a class="btn" href="./programas.html">Ver programas</a>
             <a class="btn" id="waHero" href="#" rel="noopener">Falar com a equipe</a>
           </div>
           <div class="meta" style="margin-top:18px">
-            <div><b>CRM</b> <span id="crm">PREENCHER</span></div>
+            <div class="js-hide-if-empty"><b>CRM</b> <span id="crm"></span></div>
             <div><b>Atendimento</b> Presencial e telemedicina</div>
           </div>
         </div>
@@ -127,7 +127,7 @@
 
           <div id="fallbackWrap">
             <p class="note" style="margin:0">
-              Configure <b>booking.mode</b> no <code>site.config.json</code> para habilitar o agendamento aqui.
+              Agendamento online em configuração. Se preferir, fale com a equipe pelo WhatsApp.
             </p>
           </div>
 
@@ -175,7 +175,16 @@
       const cfg = window.__CFG || await (await fetch("./site.config.json",{cache:"no-store"})).json();
 
       const crmEl = document.getElementById("crm");
-      if(crmEl) crmEl.textContent = cfg.clinic?.crm || "PREENCHER";
+      if(crmEl){
+        const crm = cfg.clinic?.crm;
+        const isPlaceholder = !crm || String(crm).trim().toLowerCase() === "preencher" || String(crm).trim().toLowerCase() === "a definir";
+        if(isPlaceholder){
+          const container = crmEl.closest(".js-hide-if-empty");
+          if(container) container.classList.add("hide");
+        } else {
+          crmEl.textContent = crm;
+        }
+      }
 
       const mode = cfg.booking?.mode || "calendly";
       const modeLabel = document.getElementById("modeLabel");

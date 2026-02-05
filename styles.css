@@ -185,6 +185,12 @@ h1{
   line-height:1.75;
   max-width:54ch;
 }
+.note{
+  color:rgba(35,31,28,.74);
+  line-height:1.8;
+  font-size:15px;
+  margin:0;
+}
 .ctaRow{margin-top:20px; display:flex; gap:12px; flex-wrap:wrap}
 .meta{
   margin-top:18px;
@@ -428,3 +434,9 @@ footer{background:var(--paper)}
 
 
 #contato{padding-bottom:34px}
+.contactNote{
+  color:rgba(35,31,28,.74);
+  font-size:14px;
+  line-height:1.75;
+  margin:10px 0 0;
+}

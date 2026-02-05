@@ -22,6 +22,24 @@ function resolveFromBase(baseUrl, path){
   try{ return new URL(path, baseUrl).href; }catch(e){ return path; }
 }
 
+function isPlaceholder(value){
+  if(value === undefined || value === null) return true;
+  const v = String(value).trim().toLowerCase();
+  return v === "" || v === "preencher" || v === "a definir";
+}
+
+function setTextOrHide(el, value){
+  if(!el) return false;
+  if(isPlaceholder(value)){
+    el.textContent = "";
+    const container = el.closest(".js-hide-if-empty");
+    if(container) container.classList.add("hide");
+    return false;
+  }
+  el.textContent = value;
+  return true;
+}
+
 function makeWhatsAppLink(numberE164, msg){
   const num = (numberE164 || "").replace("+","").replace(/\s/g,"");
   return "https://wa.me/" + num + "?text=" + encodeURIComponent(msg);
@@ -60,14 +78,19 @@ function setupMobileNav(){
 
   // CRM
   const crmEl = document.getElementById("crm");
-  if(crmEl) crmEl.textContent = cfg.clinic?.crm || "PREENCHER";
+  setTextOrHide(crmEl, cfg.clinic?.crm);
 
   // Endereço e horários
   const addrEl = document.getElementById("addr");
-  if(addrEl) addrEl.textContent = cfg.clinic?.address_line || "PREENCHER";
+  const hasAddr = setTextOrHide(addrEl, cfg.clinic?.address_line);
 
   const hoursEl = document.getElementById("hours");
-  if(hoursEl) hoursEl.textContent = cfg.clinic?.hours_line || "PREENCHER";
+  const hasHours = setTextOrHide(hoursEl, cfg.clinic?.hours_line);
+
+  const contactFallback = document.getElementById("contactFallback");
+  if(contactFallback && !hasAddr && !hasHours){
+    contactFallback.classList.remove("hide");
+  }
 
   // WhatsApp
   const waNumber = cfg.clinic?.whatsapp_e164 || cfg.clinic?.phone_e164 || "+5561981573081";
