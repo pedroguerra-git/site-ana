@@ -65,7 +65,7 @@ header .top{
   min-width:0;
 }
 .logo{display:flex; align-items:center; max-width:100%}
-.logoMark{height:26px; width:auto; display:block}
+.logoMark{height:32px; width:auto; display:block}
 .logoType{
   font-family: "Georgia", "Times New Roman", serif;
   font-size:20px;
@@ -73,7 +73,7 @@ header .top{
   fill:var(--ink);
 }
 @media (max-width: 380px){
-  .logoMark{height:24px}
+  .logoMark{height:26px}
   .logoType{font-size:18px}
 }
 
@@ -414,7 +414,8 @@ footer{padding:42px 0}
   .hero{background-size:contain; background-position:right top; min-height:66vh;}
 
   .wrap{padding:0 36px}
-  header .top{height:72px}
+  header .top{height:76px}
+  .logoMark{height:36px}
   nav{position:static; display:flex !important; background:transparent; border:0; box-shadow:none}
   nav .wrap{padding:0}
   nav a{display:inline-block; border:0; padding:0; margin-left:18px}

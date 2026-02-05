@@ -37,7 +37,7 @@
     <div class="wrap">
       <div class="top">
         <a class="brand" href="./index.html" aria-label="Início">
-          <img id="logo" src="./assets/logo.svg" alt="Ana Paula Rocha" />
+          <img id="logo" class="logoMark" src="./assets/logo_nova.png" alt="Ana Paula Rocha" />
         </a>
 
         <button class="navBtn" id="navBtn" aria-label="Abrir menu" aria-expanded="false">
@@ -78,6 +78,7 @@
           </div>
           <div class="meta" style="margin-top:18px">
             <div class="js-hide-if-empty"><b>CRM</b> <span id="crm"></span></div>
+            <div class="js-hide-if-empty"><b>RQE</b> <span id="rqe"></span></div>
             <div><b>Atendimento</b> Presencial e telemedicina</div>
           </div>
         </div>
@@ -183,6 +184,18 @@
           if(container) container.classList.add("hide");
         } else {
           crmEl.textContent = crm;
+        }
+      }
+
+      const rqeEl = document.getElementById("rqe");
+      if(rqeEl){
+        const rqe = cfg.clinic?.rqe;
+        const isPlaceholder = !rqe || String(rqe).trim().toLowerCase() === "preencher" || String(rqe).trim().toLowerCase() === "a definir";
+        if(isPlaceholder){
+          const container = rqeEl.closest(".js-hide-if-empty");
+          if(container) container.classList.add("hide");
+        } else {
+          rqeEl.textContent = rqe;
         }
       }
 

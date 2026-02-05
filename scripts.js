@@ -76,9 +76,11 @@ function setupMobileNav(){
     if(logoUrl) logoEl.src = logoUrl;
   }
 
-  // CRM
+  // CRM + RQE
   const crmEl = document.getElementById("crm");
   setTextOrHide(crmEl, cfg.clinic?.crm);
+  const rqeEl = document.getElementById("rqe");
+  setTextOrHide(rqeEl, cfg.clinic?.rqe);
 
   // Endereço e horários
   const addrEl = document.getElementById("addr");
