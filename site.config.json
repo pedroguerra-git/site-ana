@@ -21,11 +21,10 @@
     "secondary_label": "WhatsApp"
   },
   "booking": {
-    "mode": "feegow",
+    "mode": "calendly",
     "calendly_embed_url": "PREENCHER",
     "doctoralia_embed_url": "PREENCHER",
     "external_booking_url": "PREENCHER",
-    "feegow_online_url": "PREENCHER",
     "api_endpoint": "https://SEU-DOMINIO/api/booking",
     "api_auth_token": "PREENCHER"
   }
